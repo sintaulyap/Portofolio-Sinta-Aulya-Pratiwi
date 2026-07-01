@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sinta Aulya Pratiwi — Portofolio</title>
+<meta name="description" content="Portofolio Sinta Aulya Pratiwi — Finance, Accounting & Tax Specialist.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #FCF1EF;
+    --bg-panel: #F6E1DC;
+    --ink: #3B2A2C;
+    --ink-soft: #8A6B6C;
+    --rose: #C8788A;
+    --rose-deep: #A85468;
+    --gold: #C9A227;
+    --line: #EAD1CB;
+    --radius: 4px;
+  }
+
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  html{ scroll-behavior: smooth; }
+
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{ color: inherit; text-decoration: none; }
+  ::selection{ background: var(--rose); color: #fff; }
+
+  .wrap{ max-width: 980px; margin: 0 auto; padding: 0 28px; }
+
+  header{
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(252,241,239,0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav.wrap{ display:flex; align-items:center; justify-content: space-between; height: 64px; }
+  .brand{ font-family: 'Fraunces', serif; font-size: 18px; font-weight: 600; }
+  .brand span{ color: var(--rose-deep); font-style: italic; }
+  .navlinks{ display:flex; gap: 28px; font-size: 14px; }
+  .navlinks a{ position: relative; color: var(--ink-soft); transition: color .2s ease; }
+  .navlinks a:hover{ color: var(--ink); }
+  .navlinks a::after{
+    content:""; position:absolute; left:0; bottom:-4px;
+    width:0; height:2px; background: var(--gold);
+    transition: width .25s ease;
+  }
+  .navlinks a:hover::after{ width:100%; }
+  a:focus-visible{ outline: 2px solid var(--rose-deep); outline-offset: 3px; }
+
+  .hero{ padding: 96px 0 80px; border-bottom: 1px solid var(--line); }
+  .hero-grid{ display:grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
+  .eyebrow{
+    font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--rose-deep);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    display:flex; align-items:center; gap:10px; margin-bottom: 22px;
+  }
+  .eyebrow::before{ content:""; width: 22px; height: 1px; background: var(--rose-deep); }
+  h1{
+    font-family: 'Fraunces', serif; font-weight: 500;
+    font-size: clamp(2.4rem, 5.4vw, 3.8rem);
+    line-height: 1.08; margin-bottom: 22px;
+  }
+  h1 em{ font-style: italic; font-weight: 500; color: var(--rose-deep); }
+  .hero-sub{ font-size: 17px; color: var(--ink-soft); max-width: 48ch; margin-bottom: 32px; }
+  .hero-tags{ display:flex; gap: 10px; flex-wrap: wrap; margin-bottom: 34px; }
+  .hero-tag{
+    font-family: 'JetBrains Mono', monospace; font-size: 12px;
+    padding: 7px 14px; background: var(--bg-panel); border-radius: 20px;
+    color: var(--ink-soft); border: 1px solid var(--line);
+  }
+  .hero-actions{ display:flex; gap: 16px; flex-wrap: wrap; }
+  .btn{
+    display:inline-flex; align-items:center; gap: 8px;
+    padding: 13px 22px; font-size: 14px; font-weight: 500;
+    border-radius: var(--radius); border: 1px solid var(--rose-deep);
+    transition: all .2s ease;
+  }
+  .btn-primary{ background: var(--rose-deep); color: #fff; }
+  .btn-primary:hover{ background: var(--rose); border-color: var(--rose); }
+  .btn-ghost{ color: var(--rose-deep); }
+  .btn-ghost:hover{ background: var(--rose-deep); color: #fff; }
+
+  .hero-photo{
+    width: 220px; height: 260px;
+    border-radius: 140px 140px 8px 8px;
+    overflow: hidden;
+    background: var(--bg-panel);
+    border: 3px solid #fff;
+    box-shadow: 0 18px 40px -14px rgba(168,84,104,0.35);
+  }
+  .hero-photo img{ width: 100%; height: 100%; object-fit: cover; }
+
+  section{ padding: 76px 0; border-bottom: 1px solid var(--line); }
+  .section-head{ display:flex; align-items:baseline; justify-content: space-between; margin-bottom: 40px; gap: 20px; }
+  .section-tag{ font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--ink-soft); white-space: nowrap; }
+  h2{ font-family: 'Fraunces', serif; font-weight: 500; font-size: clamp(1.7rem, 3vw, 2.2rem); }
+
+  .about-grid{ display:grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: start; }
+  .about-grid p{ color: var(--ink-soft); margin-bottom: 16px; max-width: 58ch; }
+  .stat-list{ display:flex; flex-direction: column; gap: 16px; }
+  .stat{ padding: 16px 0; border-top: 1px solid var(--line); }
+  .stat-num{ font-family: 'Fraunces', serif; font-size: 1.7rem; color: var(--rose-deep); }
+  .stat-label{ font-size: 13px; color: var(--ink-soft); }
+
+  .exp-item{ padding: 30px 0; border-top: 1px solid var(--line); }
+  .exp-item:last-child{ border-bottom: 1px solid var(--line); }
+  .exp-top{ display:flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 6px; }
+  .exp-role{ font-family: 'Fraunces', serif; font-size: 1.25rem; }
+  .exp-period{ font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--rose-deep); white-space: nowrap; }
+  .exp-org{ font-size: 14px; color: var(--ink-soft); margin-bottom: 16px; }
+  .exp-block{ margin-top: 16px; }
+  .exp-block-title{ font-size: 13px; font-weight: 600; color: var(--rose-deep); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+  .exp-block ul{ list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .exp-block li{ font-size: 14.5px; color: var(--ink-soft); padding-left: 18px; position: relative; }
+  .exp-block li::before{ content: "—"; position: absolute; left: 0; color: var(--gold); }
+  .achievement{
+    margin-top: 16px; padding: 14px 18px; background: var(--bg-panel);
+    border-radius: var(--radius); font-size: 14px; color: var(--ink);
+    border-left: 3px solid var(--rose-deep);
+  }
+  .achievement b{ color: var(--rose-deep); }
+
+  .edu-item{ padding: 26px 0; border-top: 1px solid var(--line); }
+  .edu-item:last-child{ border-bottom: 1px solid var(--line); }
+  .edu-top{ display:flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .edu-school{ font-family: 'Fraunces', serif; font-size: 1.2rem; }
+  .edu-period{ font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--rose-deep); }
+  .edu-detail{ font-size: 14px; color: var(--ink-soft); margin-top: 6px; }
+
+  .skills-cols{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+  .skills-col-title{ font-family: 'JetBrains Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--rose-deep); margin-bottom: 14px; }
+  .skills-wrap{ display:flex; flex-wrap: wrap; gap: 10px; }
+  .skill-pill{
+    font-family: 'JetBrains Mono', monospace; font-size: 12.5px;
+    padding: 8px 14px; background: var(--bg-panel); border-radius: 20px;
+    border: 1px solid var(--line);
+  }
+
+  .org-item{
+    display:grid; grid-template-columns: 100px 1fr; gap: 22px;
+    padding: 22px 0; border-top: 1px solid var(--line);
+  }
+  .org-item:last-child{ border-bottom: 1px solid var(--line); }
+  .org-period{ font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--ink-soft); }
+  .org-role{ font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 3px; }
+  .org-org{ font-size: 13.5px; color: var(--ink-soft); }
+
+  .project-card{
+    padding: 28px; background: var(--bg-panel); border-radius: 8px;
+    display:grid; grid-template-columns: 1fr; gap: 14px; align-content: start;
+  }
+  .projects-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .project-title{ font-family: 'Fraunces', serif; font-size: 1.3rem; }
+  .project-desc{ font-size: 14.5px; color: var(--ink-soft); }
+  .project-tags{ display:flex; gap: 8px; flex-wrap: wrap; }
+  .project-link{
+    display:inline-flex; align-items:center; gap: 6px; width: fit-content;
+    font-family: 'JetBrains Mono', monospace; font-size: 12.5px;
+    color: var(--rose-deep); border-bottom: 1px solid var(--rose-deep);
+    padding-bottom: 3px; transition: opacity .2s ease;
+  }
+  .project-link:hover{ opacity: 0.7; }
+
+  .cert-list{ display:flex; flex-direction: column; }
+  .cert-item{
+    display:flex; align-items:center; gap: 14px;
+    padding: 16px 0; border-top: 1px solid var(--line);
+    font-size: 14.5px;
+  }
+  .cert-item:last-child{ border-bottom: 1px solid var(--line); }
+  .cert-item::before{ content: "✓"; color: var(--rose-deep); font-weight: 600; }
+
+  .contact{ border-bottom: none; }
+  .contact-inner{ display:flex; flex-direction: column; align-items: flex-start; gap: 18px; }
+  .contact h2{ max-width: 16ch; }
+  .contact-links{ display:flex; gap: 26px; flex-wrap: wrap; margin-top: 8px; }
+  .contact-links a{
+    font-family: 'JetBrains Mono', monospace; font-size: 14px;
+    border-bottom: 1px solid var(--line); padding-bottom: 4px;
+    transition: border-color .2s ease, color .2s ease;
+  }
+  .contact-links a:hover{ border-color: var(--rose-deep); color: var(--rose-deep); }
+
+  footer{
+    padding: 26px 0 46px; display:flex; justify-content: space-between;
+    font-size: 12px; color: var(--ink-soft); font-family: 'JetBrains Mono', monospace;
+  }
+
+  @media (max-width: 720px){
+    .navlinks{ display:none; }
+    .hero-grid{ grid-template-columns: 1fr; }
+    .hero-photo{ order: -1; width: 160px; height: 190px; }
+    .about-grid{ grid-template-columns: 1fr; }
+    .skills-cols{ grid-template-columns: 1fr; gap: 26px; }
+    .org-item{ grid-template-columns: 1fr; gap: 6px; }
+    .projects-grid{ grid-template-columns: 1fr; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+    *{ transition: none !important; animation: none !important; }
+  }
+
+  .reveal{ opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in{ opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="brand">Sinta<span>.</span></div>
+    <div class="navlinks">
+      <a href="#about">Tentang</a>
+      <a href="#experience">Pengalaman</a>
+      <a href="#education">Pendidikan</a>
+      <a href="#skills">Keahlian</a>
+      <a href="#contact">Kontak</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero wrap">
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow">Portofolio — 2026</div>
+      <h1>Merapikan angka, <em>menjaga integritas</em> data keuangan.</h1>
+      <p class="hero-sub">
+        Sinta Aulya Pratiwi — Finance, Accounting & Tax Specialist dengan pengalaman menyusun laporan
+        keuangan, rekonsiliasi data, dan kepatuhan pajak perusahaan. Berbasis di Jakarta Selatan.
+      </p>
+      <div class="hero-tags">
+        <span class="hero-tag">Accurate</span>
+        <span class="hero-tag">Zahir</span>
+        <span class="hero-tag">CoreTax</span>
+        <span class="hero-tag">SAP Logon</span>
+        <span class="hero-tag">Excel Mahir</span>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#experience">Lihat Pengalaman</a>
+        <a class="btn btn-ghost" href="#contact">Hubungi Saya</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="foto-sinta.jpg" alt="Foto Sinta Aulya Pratiwi" onerror="this.parentElement.style.display='none'">
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Tentang Saya</h2>
+      <div class="section-tag">01 — Profil</div>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p class="reveal">
+          Finance, Accounting & Tax Specialist berpengalaman dalam audit data dan pelaporan keuangan
+          yang terintegrasi, dengan rekam jejak dalam merekonstruksi data keuangan untuk menjaga
+          akurasi dan transparansi perusahaan. Cakap menggunakan Accurate, Zahir, dan CoreTax untuk
+          operasional keuangan yang efisien serta patuh terhadap regulasi.
+        </p>
+        <p class="reveal">
+          Fresh graduate Sarjana Akuntansi dari STIE YKPN Yogyakarta dengan IPK 3,52 (Cum Laude), aktif
+          berorganisasi sebagai Sekretaris, Anggota, hingga Wakil Ketua semasa kuliah. Berkomitmen
+          menjaga integritas data untuk mendukung pengambilan keputusan manajemen secara strategis,
+          didukung motivasi tinggi untuk terus belajar hal baru.
+        </p>
+      </div>
+      <div class="stat-list">
+        <div class="stat reveal">
+          <div class="stat-num">3.52</div>
+          <div class="stat-label">IPK — Cum Laude</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-num">2024</div>
+          <div class="stat-label">Lulus S.Ak, STIE YKPN</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-num">7+</div>
+          <div class="stat-label">Sertifikasi profesional</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Pengalaman Kerja</h2>
+      <div class="section-tag">02 — Karier</div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-top">
+        <div class="exp-role">Staff Finance, Accounting, dan Tax</div>
+        <div class="exp-period">Mei 2026 — Sekarang</div>
+      </div>
+      <div class="exp-org">PT. Asia BNC Indonesia (Cosmetics & Beauty Distribution Industry) · Gandaria Selatan, Jakarta Selatan</div>
+
+      <div class="exp-block">
+        <div class="exp-block-title">Finance (Treasury, Billing, & Operasional)</div>
+        <ul>
+          <li>Mengelola transaksi keuangan perusahaan sehari-hari, membuat dan menerbitkan invoice, serta memantau penagihan piutang usaha (AR).</li>
+          <li>Berperan sebagai Maker pada sistem KlikBCA untuk menginisiasi dan menyiapkan pembayaran perbankan elektronik secara aman.</li>
+        </ul>
+      </div>
+
+      <div class="exp-block">
+        <div class="exp-block-title">Accounting (Pelaporan & Analisis)</div>
+        <ul>
+          <li>Mengelola pembukuan secara end-to-end, menjaga akurasi jurnal, serta menyusun laporan keuangan yang komprehensif.</li>
+        </ul>
+      </div>
+
+      <div class="exp-block">
+        <div class="exp-block-title">Accounting Inventory</div>
+        <ul>
+          <li>Mengelola dan mengontrol pencatatan akuntansi persediaan, melakukan penilaian stok (stock valuation), serta rekonsiliasi aset/inventaris.</li>
+        </ul>
+      </div>
+
+      <div class="exp-block">
+        <div class="exp-block-title">Kepatuhan Pajak</div>
+        <ul>
+          <li>Menangani administrasi pajak perusahaan, menghitung kewajiban pajak, serta memastikan kepatuhan terhadap regulasi pajak yang berlaku.</li>
+        </ul>
+      </div>
+
+      <div class="achievement">
+        <b>Pencapaian:</b> Berhasil menyederhanakan proses invoicing dan penagihan piutang (AR) untuk
+        menjaga arus kas yang sehat, mempertahankan eksekusi tanpa kesalahan pada pembayaran perbankan
+        elektronik via KlikBCA sebagai Maker, serta memastikan ketepatan 100% dalam pelaporan keuangan,
+        penilaian inventaris, dan kepatuhan pajak.
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-top">
+        <div class="exp-role">Staff Finance, Accounting, dan Tax</div>
+        <div class="exp-period">Jun 2024 — Mei 2026</div>
+      </div>
+      <div class="exp-org">PT. Mitra Inti Bersama (IT Solutions Industry) · Jakarta Selatan</div>
+
+      <div class="exp-block">
+        <div class="exp-block-title">Accounting (Pelaporan, Kontrol & Analisis)</div>
+        <ul>
+          <li>Melakukan pembukuan, rekonsiliasi, dan verifikasi data transaksi dengan akurasi tinggi menggunakan Accurate dan Zahir.</li>
+          <li>Menyusun laporan keuangan berkala (bulanan & tahunan), termasuk Neraca dan Laporan Laba Rugi.</li>
+          <li>Menganalisis data laporan keuangan untuk mendukung pengambilan keputusan manajemen.</li>
+          <li>Memantau saldo kas harian serta efisiensi HPP (COGS) dan biaya operasional (OPEX).</li>
+        </ul>
+      </div>
+
+      <div class="exp-block">
+        <div class="exp-block-title">Finance (Treasury & Operasional)</div>
+        <ul>
+          <li>Bertanggung jawab penuh atas manajemen kas kecil (petty cash), termasuk verifikasi voucher transaksi.</li>
+          <li>Mengaudit dan memverifikasi klaim reimbursement karyawan sebelum proses pembayaran.</li>
+          <li>Mengelola aspek administratif instrumen perbankan perusahaan.</li>
+        </ul>
+      </div>
+
+      <div class="exp-block">
+        <div class="exp-block-title">Kepatuhan Pajak</div>
+        <ul>
+          <li>Mengidentifikasi transaksi operasional objek pemotongan pajak (PPh 23, 4(2), dan 21) serta menerbitkan Bukti Potong.</li>
+          <li>Mengelola administrasi PPN Masukan dan Keluaran untuk keperluan pelaporan.</li>
+          <li>Menghitung PPh 21 karyawan sesuai skema Tarif Efektif Rata-rata (TER) terbaru.</li>
+          <li>Menyiapkan data pendukung dan melakukan ekualisasi pajak untuk pelaporan SPT Tahunan Badan.</li>
+        </ul>
+      </div>
+
+      <div class="achievement">
+        <b>Pencapaian:</b> Berhasil mengelola operasional accounting, finance, dan tax end-to-end,
+        termasuk rekonstruksi data keuangan, penyelesaian kewajiban kredit bank tepat waktu, dan
+        kepatuhan pajak 100%.
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-top">
+        <div class="exp-role">Staff Finance and Investment (Magang)</div>
+        <div class="exp-period">Sep — Des 2023</div>
+      </div>
+      <div class="exp-org">Dana Pensiun Bank Central Asia · Matraman, Jakarta Timur</div>
+      <ul>
+        <li>Menginput rekening koran dan merekapitulasi pembayaran operasional serta petty cash.</li>
+        <li>Merekonsiliasi laporan keuangan harian dan memeriksa mutasi rekening terhadap alokasi dana investasi deposito.</li>
+        <li>Memperbarui proyeksi arus kas dan administrasi deposito termasuk rekonsiliasi bunga.</li>
+        <li>Menyiapkan Surat Keterangan Bebas Pajak Bunga Deposito serta rekonsiliasi laporan deposito per bank.</li>
+      </ul>
+      <div class="achievement">
+        <b>Pencapaian:</b> Berhasil meningkatkan efisiensi dan akurasi proses manajemen keuangan
+        dan investasi deposito harian.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Pendidikan</h2>
+      <div class="section-tag">03 — Riwayat Akademik</div>
+    </div>
+
+    <div class="edu-item reveal">
+      <div class="edu-top">
+        <div class="edu-school">STIE YKPN Yogyakarta</div>
+        <div class="edu-period">2020 — 2024</div>
+      </div>
+      <div class="edu-detail">Sarjana Akuntansi (S.Ak) · IPK 3.52/4.00 (Cum Laude) · Sleman, Yogyakarta</div>
+      <div class="edu-detail">Mata kuliah relevan: Financial Statement Analysis, Taxation I & II, Auditing I & II, Internal Auditing, Computerized Accounting, Business Analytics, Accounting Information Systems.</div>
+      <div class="edu-detail">Laporan magang akhir: Analisis Manajemen Keuangan dan Investasi di Dana Pensiun BCA.</div>
+    </div>
+
+    <div class="edu-item reveal">
+      <div class="edu-top">
+        <div class="edu-school">SMAN 1 Depok</div>
+        <div class="edu-period">2017 — 2020</div>
+      </div>
+      <div class="edu-detail">Jurusan IPS (Ilmu Sosial)</div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Keahlian</h2>
+      <div class="section-tag">04 — Kemampuan</div>
+    </div>
+    <div class="skills-cols">
+      <div>
+        <div class="skills-col-title">Teknis</div>
+        <div class="skills-wrap reveal">
+          <span class="skill-pill">Accurate</span>
+          <span class="skill-pill">Zahir</span>
+          <span class="skill-pill">SAP Logon</span>
+          <span class="skill-pill">Jurnal.id</span>
+          <span class="skill-pill">ACL Desktop</span>
+          <span class="skill-pill">CaseWare IDEA</span>
+          <span class="skill-pill">CoreTax</span>
+          <span class="skill-pill">E-Faktur</span>
+          <span class="skill-pill">E-SPT</span>
+          <span class="skill-pill">Excel & Word</span>
+          <span class="skill-pill">Google Workspace</span>
+          <span class="skill-pill">Canva</span>
+        </div>
+      </div>
+      <div>
+        <div class="skills-col-title">Soft Skill</div>
+        <div class="skills-wrap reveal">
+          <span class="skill-pill">Integritas Finansial</span>
+          <span class="skill-pill">Berpikir Analitis</span>
+          <span class="skill-pill">Teliti & Detail</span>
+          <span class="skill-pill">Adaptif</span>
+          <span class="skill-pill">Manajemen Waktu</span>
+          <span class="skill-pill">Kepemimpinan</span>
+        </div>
+      </div>
+      <div>
+        <div class="skills-col-title">Bahasa</div>
+        <div class="skills-wrap reveal">
+          <span class="skill-pill">Indonesia — Aktif</span>
+          <span class="skill-pill">Inggris — Menengah</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certificates">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Sertifikat</h2>
+      <div class="section-tag">05 — Kualifikasi</div>
+    </div>
+    <div class="cert-list">
+      <div class="cert-item reveal">Brevet A & B — IAI Yogyakarta</div>
+      <div class="cert-item reveal">Business Communication Competency Test — AMA Yogyakarta</div>
+      <div class="cert-item reveal">Microsoft Office Specialist: Excel 2019 Associate</div>
+      <div class="cert-item reveal">Microsoft Office Specialist: Word 2019</div>
+      <div class="cert-item reveal">SAP – AC010 Business Processes in Financial Accounting</div>
+      <div class="cert-item reveal">SAP – SAP01 SAP Overview</div>
+      <div class="cert-item reveal">Jurnal Software for Comprehensive Bookkeeping and Accounting Process — Mekari</div>
+    </div>
+  </div>
+</section>
+
+<section id="organization">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Pengalaman Organisasi</h2>
+      <div class="section-tag">06 — Aktivitas</div>
+    </div>
+
+    <div class="org-item reveal">
+      <div class="org-period">Okt 2022 — Sep 2023</div>
+      <div>
+        <div class="org-role">Wakil Ketua</div>
+        <div class="org-org">Student Sports Activity Unit (UKM Olahraga) · STIE YKPN</div>
+      </div>
+    </div>
+    <div class="org-item reveal">
+      <div class="org-period">Okt 2022 — Sep 2023</div>
+      <div>
+        <div class="org-role">Sekretaris Divisi HRD</div>
+        <div class="org-org">Accounting Department Student Association (HMJA) · STIE YKPN</div>
+      </div>
+    </div>
+    <div class="org-item reveal">
+      <div class="org-period">Okt 2020 — Sep 2022</div>
+      <div>
+        <div class="org-role">Anggota</div>
+        <div class="org-org">Koperasi Mahasiswa · STIE YKPN</div>
+      </div>
+    </div>
+    <div class="org-item reveal">
+      <div class="org-period">Ags 2018 — Ags 2019</div>
+      <div>
+        <div class="org-role">Sekretaris Umum</div>
+        <div class="org-org">Pramuka · SMA Negeri 1 Depok</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="project">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Proyek</h2>
+      <div class="section-tag">07 — Kontribusi</div>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="project-title">Pemasaran Digital — UMKM Bakmi Om.Ka</div>
+        <div class="project-desc">
+          Melakukan pendampingan UMKM Bakmi Om.Ka dan membangun personal branding usaha tersebut.
+          Mendorong interaksi yang lebih besar, meningkatkan penjualan, membangun citra positif,
+          serta meningkatkan jumlah pengikut media sosial.
+        </div>
+        <div class="project-tags">
+          <span class="hero-tag">Pemasaran Digital</span>
+          <span class="hero-tag">Personal Branding</span>
+          <span class="hero-tag">UMKM</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-title">Perancangan Proposal Bisnis Keuangan & Operasional "COCO Costume Collection"</div>
+        <div class="project-desc">
+          Menyusun proposal perencanaan bisnis komprehensif untuk marketplace sewa kostum digital (COCO).
+          Bertanggung jawab penuh dalam merancang proyeksi keuangan dan alokasi anggaran modal sebesar
+          Rp260.000.000, menyusun rencana pengadaan barang, biaya operasional, serta melakukan analisis
+          strategi bisnis berbasis SWOT.
+        </div>
+        <div class="project-tags">
+          <span class="hero-tag">STIE YKPN · 2022</span>
+          <span class="hero-tag">Perencanaan Keuangan</span>
+          <span class="hero-tag">Analisis SWOT</span>
+        </div>
+        <a class="project-link" href="https://drive.google.com/file/d/1cSy1_tWUFa92V2-ZDwJA7ttsiR75T-OK/view?usp=drive_link" target="_blank" rel="noopener">
+          Lihat Proposal
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-title">Perancangan Basis Data Relasional Sistem Penjualan & Inventaris</div>
+        <div class="project-desc">
+          Menyusun dan mengimplementasikan sistem basis data relasional komprehensif untuk manajemen
+          penjualan dan inventaris barang berbasis desktop. Bertanggung jawab penuh dalam merancang
+          arsitektur data (Entity-Relationship Diagram) menggunakan Lucidchart, mengonstruksi skema
+          tabel terintegrasi di Microsoft Access, menyusun fungsi query SQL kompleks (termasuk kalkulasi
+          finansial otomatis dan Crosstab Query), serta membangun antarmuka (Data Entry & Navigation
+          Forms) untuk optimalisasi efisiensi operasional sistem.
+        </div>
+        <div class="project-tags">
+          <span class="hero-tag">STIE YKPN · 2022</span>
+          <span class="hero-tag">Microsoft Access</span>
+          <span class="hero-tag">SQL</span>
+          <span class="hero-tag">ERD</span>
+        </div>
+        <a class="project-link" href="https://drive.google.com/file/d/1Bobzv6zjV_WOluStz5cZwGETNp4g9WDM/view?usp=drive_link" target="_blank" rel="noopener">
+          Lihat Proyek
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-title">Analisis Penerapan Komunikasi Bisnis pada Kualitas Pelayanan Pasien Rawat Jalan di RSU Siloam Yogyakarta</div>
+        <div class="project-desc">
+          Menyusun proyek penelitian kualitatif deskriptif kolaboratif untuk mengevaluasi efektivitas
+          komunikasi interpersonal tenaga kesehatan dan dampaknya terhadap kualitas pelayanan medis
+          pasien rawat jalan. Bertanggung jawab dalam mengoordinasi perizinan instansi, merancang
+          instrumen pertanyaan, serta melakukan teknik pengumpulan data lapangan melalui observasi
+          langsung dan wawancara mendalam (in-depth interview) kepada para pasien. Mengolah data
+          primer dan sekunder guna melakukan analisis gap pelayanan (Knowledge, Communication,
+          Standard, Service, dan Delivery Gap) untuk merumuskan rekomendasi strategi operasional
+          yang solutif bagi manajemen rumah sakit.
+        </div>
+        <div class="project-tags">
+          <span class="hero-tag">STIE YKPN · 2023</span>
+          <span class="hero-tag">Penelitian Kualitatif</span>
+          <span class="hero-tag">Komunikasi Bisnis</span>
+        </div>
+        <a class="project-link" href="https://drive.google.com/file/d/1fHCiY0yy_0kOfhgf4TJJX7AF47XxYf6i/view?usp=drive_link" target="_blank" rel="noopener">
+          Lihat Proyek
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-title">Analisis Strategi Pemasaran Digital Brand Kecantikan Somethinc</div>
+        <div class="project-desc">
+          Menyusun proyek analisis komprehensif mengenai strategi pemasaran digital terintegrasi
+          (omnichannel) pada brand lokal Somethinc untuk mengidentifikasi taktik brand awareness
+          dan penetrasi pasar. Bertanggung jawab dalam melakukan riset pasar kuantitatif dan
+          kualitatif, termasuk memetakan customer persona pengguna produk kecantikan, mengaudit
+          efektivitas campaign digital terkemuka (#REALISTICWHITE dan #RespectMyBody), serta
+          mengevaluasi performa lalu lintas web (traffic) menggunakan alat analitik SimilarWeb.
+          Merumuskan rekomendasi strategi digital marketing yang solutif dan aplikatif, meliputi
+          optimalisasi SEO/SEM, pengembangan brand community, penyelenggaraan edutainment kelas,
+          serta perluasan kolaborasi instansi guna meningkatkan engagement konsumen.
+        </div>
+        <div class="project-tags">
+          <span class="hero-tag">Proyek Kelompok · 2023</span>
+          <span class="hero-tag">Pemasaran Digital</span>
+          <span class="hero-tag">Riset Pasar</span>
+        </div>
+        <a class="project-link" href="https://drive.google.com/file/d/137Sh0aG0TH3J--YNF6vC61TRGJnns5KD/view?usp=drive_link" target="_blank" rel="noopener">
+          Lihat Proyek
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap contact-inner">
+    <div class="section-tag">08 — Kontak</div>
+    <h2>Mari bekerja sama.</h2>
+    <p class="reveal" style="color:var(--ink-soft); max-width:44ch;">
+      Terbuka untuk peluang di bidang finance, accounting, dan tax — atau sekadar berdiskusi
+      seputar laporan keuangan dan kepatuhan pajak.
+    </p>
+    <div class="contact-links">
+      <a href="mailto:sintaulyap@gmail.com">sintaulyap@gmail.com</a>
+      <a href="tel:089619007019">0896 1900 7019</a>
+      <a href="https://www.linkedin.com/in/sinta-aulya-pratiwi" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <span>&copy; 2026 Sinta Aulya Pratiwi</span>
+  <span>Jakarta Selatan</span>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
