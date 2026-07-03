@@ -174,12 +174,20 @@
 
   .cert-list{ display:flex; flex-direction: column; }
   .cert-item{
-    display:flex; align-items:center; gap: 14px;
+    display:flex; align-items:center; justify-content: space-between; gap: 14px;
     padding: 16px 0; border-top: 1px solid var(--line);
-    font-size: 14.5px;
+    font-size: 14.5px; transition: color .2s ease, padding-left .2s ease;
   }
   .cert-item:last-child{ border-bottom: 1px solid var(--line); }
-  .cert-item::before{ content: "✓"; color: var(--rose-deep); font-weight: 600; }
+  .cert-item::before{ content: "✓"; color: var(--rose-deep); font-weight: 600; margin-right: 14px; }
+  .cert-item:hover{ color: var(--rose-deep); padding-left: 6px; }
+  .cert-item::after{
+    content: ""; width: 13px; height: 13px; margin-left: auto; flex-shrink: 0;
+    background: currentColor;
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>') center / contain no-repeat;
+    mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>') center / contain no-repeat;
+    opacity: 0.5;
+  }
 
   .contact{ border-bottom: none; }
   .contact-inner{ display:flex; flex-direction: column; align-items: flex-start; gap: 18px; }
@@ -346,6 +354,10 @@
         elektronik via KlikBCA sebagai Maker, serta memastikan ketepatan 100% dalam pelaporan keuangan,
         penilaian inventaris, dan kepatuhan pajak.
       </div>
+      <a class="project-link" href="pt-asia-bnc.html" style="margin-top:16px;">
+        Lihat Detail Kegiatan
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
     </div>
 
     <div class="exp-item reveal">
@@ -389,6 +401,10 @@
         termasuk rekonstruksi data keuangan, penyelesaian kewajiban kredit bank tepat waktu, dan
         kepatuhan pajak 100%.
       </div>
+      <a class="project-link" href="pt-mitra-inti-bersama.html" style="margin-top:16px;">
+        Lihat Detail Kegiatan
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
     </div>
 
     <div class="exp-item reveal">
@@ -407,6 +423,10 @@
         <b>Pencapaian:</b> Berhasil meningkatkan efisiensi dan akurasi proses manajemen keuangan
         dan investasi deposito harian.
       </div>
+      <a class="project-link" href="dana-pensiun-bca.html" style="margin-top:16px;">
+        Lihat Detail Kegiatan
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
     </div>
   </div>
 </section>
@@ -426,6 +446,10 @@
       <div class="edu-detail">Sarjana Akuntansi (S.Ak) · IPK 3.52/4.00 (Cum Laude) · Sleman, Yogyakarta</div>
       <div class="edu-detail">Mata kuliah relevan: Financial Statement Analysis, Taxation I & II, Auditing I & II, Internal Auditing, Computerized Accounting, Business Analytics, Accounting Information Systems.</div>
       <div class="edu-detail">Laporan magang akhir: Analisis Manajemen Keuangan dan Investasi di Dana Pensiun BCA.</div>
+      <a class="project-link" href="stie-ykpn.html" style="margin-top:16px;">
+        Lihat Detail Kegiatan
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
     </div>
 
     <div class="edu-item reveal">
@@ -434,6 +458,10 @@
         <div class="edu-period">2017 — 2020</div>
       </div>
       <div class="edu-detail">Jurusan IPS (Ilmu Sosial)</div>
+      <a class="project-link" href="sman-1-depok.html" style="margin-top:16px;">
+        Lihat Detail Kegiatan
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
     </div>
   </div>
 </section>
@@ -491,13 +519,13 @@
       <div class="section-tag">05 — Kualifikasi</div>
     </div>
     <div class="cert-list">
-      <div class="cert-item reveal">Brevet A & B — IAI Yogyakarta</div>
-      <div class="cert-item reveal">Business Communication Competency Test — AMA Yogyakarta</div>
-      <div class="cert-item reveal">Microsoft Office Specialist: Excel 2019 Associate</div>
-      <div class="cert-item reveal">Microsoft Office Specialist: Word 2019</div>
-      <div class="cert-item reveal">SAP – AC010 Business Processes in Financial Accounting</div>
-      <div class="cert-item reveal">SAP – SAP01 SAP Overview</div>
-      <div class="cert-item reveal">Jurnal Software for Comprehensive Bookkeeping and Accounting Process — Mekari</div>
+      <a class="cert-item reveal" href="https://drive.google.com/file/d/192UjoonwPl3vjEjKLVESlUK2B1WCYAac/view?usp=drive_link" target="_blank" rel="noopener">Brevet A & B — IAI Yogyakarta</a>
+      <a class="cert-item reveal" href="https://drive.google.com/file/d/18iOf6WeNfDAlHJ8IBL01LtjD_kILqGPp/view?usp=drive_link" target="_blank" rel="noopener">Business Communication Competency Test — AMA Yogyakarta</a>
+      <a class="cert-item reveal" href="https://drive.google.com/file/d/1Obb3USOodOqvCFEMUTckwbzjo7DDWRJw/view?usp=drive_link" target="_blank" rel="noopener">Microsoft Office Specialist: Excel 2019 Associate</a>
+      <a class="cert-item reveal" href="https://drive.google.com/file/d/1S31XdkSChFgxWUWA--0nKcMC4EijkCcx/view?usp=drive_link" target="_blank" rel="noopener">Microsoft Office Specialist: Word 2019</a>
+      <a class="cert-item reveal" href="https://drive.google.com/file/d/1Dgs-DbrjaKo88eIPtHLDID06q448MAj5/view?usp=drive_link" target="_blank" rel="noopener">SAP – AC010 Business Processes in Financial Accounting</a>
+      <a class="cert-item reveal" href="https://drive.google.com/file/d/1EiwimYEO8XXNwLlYXTaJh9X2xCKFFX6k/view?usp=drive_link" target="_blank" rel="noopener">SAP – SAP01 SAP Overview</a>
+      <a class="cert-item reveal" href="https://drive.google.com/file/d/19sWFSDoFECqBpuUTWdKAHkPfRDyymxO_/view?usp=drive_link" target="_blank" rel="noopener">Jurnal Software for Comprehensive Bookkeeping and Accounting Process — Mekari</a>
     </div>
   </div>
 </section>
@@ -514,6 +542,10 @@
       <div>
         <div class="org-role">Wakil Ketua</div>
         <div class="org-org">Student Sports Activity Unit (UKM Olahraga) · STIE YKPN</div>
+        <a class="project-link" href="org-ukm-olahraga.html" style="margin-top:10px;">
+          Lihat Detail Kegiatan
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
     <div class="org-item reveal">
@@ -521,6 +553,10 @@
       <div>
         <div class="org-role">Sekretaris Divisi HRD</div>
         <div class="org-org">Accounting Department Student Association (HMJA) · STIE YKPN</div>
+        <a class="project-link" href="org-hmja.html" style="margin-top:10px;">
+          Lihat Detail Kegiatan
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
     <div class="org-item reveal">
@@ -528,6 +564,10 @@
       <div>
         <div class="org-role">Anggota</div>
         <div class="org-org">Koperasi Mahasiswa · STIE YKPN</div>
+        <a class="project-link" href="org-koperasi-mahasiswa.html" style="margin-top:10px;">
+          Lihat Detail Kegiatan
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
     <div class="org-item reveal">
@@ -535,6 +575,10 @@
       <div>
         <div class="org-role">Sekretaris Umum</div>
         <div class="org-org">Pramuka · SMA Negeri 1 Depok</div>
+        <a class="project-link" href="org-pramuka.html" style="margin-top:10px;">
+          Lihat Detail Kegiatan
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
   </div>
